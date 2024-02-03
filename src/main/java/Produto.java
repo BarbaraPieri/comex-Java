@@ -29,5 +29,11 @@ public class Produto {
         public int getQuantidade() {
             return quantidade;
         }
-    }
 
+        // Método para imprimir dados do produto no console
+        public void imprimirDados() {
+         System.out.println(">> Dados do produto");
+         System.out.println(":: Nome: " + getNome());
+         System.out.println(":: Descrição: " + getDescricao());
+        }
+}
