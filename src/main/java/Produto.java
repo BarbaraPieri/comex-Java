@@ -5,8 +5,13 @@ public class Produto {
         private double precoUnitario;
         private int quantidade;
 
-        // Construtor
+        // Construtor com obrigatoriedade do nome
         public Produto(String nome, String descricao, double precoUnitario, int quantidade) {
+            // Verifica se o nome é nulo ou vazio
+            if (nome == null || nome.trim().isEmpty()) {
+                throw new IllegalArgumentException("O nome do produto é obrigatório.");
+            }
+
             this.nome = nome;
             this.descricao = descricao;
             this.precoUnitario = precoUnitario;
@@ -35,5 +40,8 @@ public class Produto {
          System.out.println(">> Dados do produto");
          System.out.println(":: Nome: " + getNome());
          System.out.println(":: Descrição: " + getDescricao());
+         System.out.println(":: Preço Unitário: R$" + getPrecoUnitario());
+         System.out.println(":: Quantidade em estoque: " + getQuantidade());
         }
 }
+
