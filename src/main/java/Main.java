@@ -3,7 +3,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Criando um objeto Scanner para ler a entrada do teclado
+        // Realizar a consulta à API externa
+        String respostaAPI = APIRequest.consultarAPIExterna();
+
+        // Imprimir o resultado da consulta
+        System.out.println("Resposta da API:");
+        System.out.println(respostaAPI);
+
+        // situação anterior - Criando um objeto Scanner para ler a entrada do teclado
         Scanner scanner = new Scanner(System.in);
 
         try {
