@@ -15,14 +15,26 @@ public class Eletronico extends Produto{
         return voltagem;
     }
 
+    public void setVoltagem(int voltagem) {
+        this.voltagem = voltagem;
+    }
+
+
     public int getPotencia() {
         return potencia;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
     }
 
     // Método para imprimir dados do produto eletronico no console
     @Override
     public void imprimirDados() {
-        super.imprimirDados(); // Chama o método da classe pai
+        System.out.println("Nome: " + getNome());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Preço Unitário: " + getPrecoUnitario());
+        System.out.println("Quantidade: " + getQuantidade());
         System.out.println(":: Voltagem: " + getVoltagem() + "V");
         System.out.println(":: Potência: " + getPotencia() + "W");
     }

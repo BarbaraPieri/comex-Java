@@ -1,4 +1,4 @@
-public class Livro extends Produto{
+public class Livro extends Produto {
     // Atributos adicionais para Livro
     private String isbn;
     private int totalPaginas;
@@ -22,13 +22,11 @@ public class Livro extends Produto{
     // Método para imprimir dados do livro no console
     @Override
     public void imprimirDados() {
-        super.imprimirDados(); // Chama o método da classe pai
+        System.out.println("Nome: " + getNome());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Preço Unitário: " + getPrecoUnitario());
+        System.out.println("Quantidade: " + getQuantidade());
         System.out.println(":: ISBN: " + getIsbn());
         System.out.println(":: Total de Páginas: " + getTotalPaginas());
     }
-<<<<<<< Updated upstream
 }
-=======
-
-}
->>>>>>> Stashed changes
