@@ -26,4 +26,9 @@ public class Livro extends Produto{
         System.out.println(":: ISBN: " + getIsbn());
         System.out.println(":: Total de Páginas: " + getTotalPaginas());
     }
+<<<<<<< Updated upstream
 }
+=======
+
+}
+>>>>>>> Stashed changes
