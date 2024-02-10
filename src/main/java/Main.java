@@ -1,6 +1,9 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import API.APIRequest;
+import API.Product;
+
 public class Main {
     public static void main(String[] args) {
         //Criando um objeto Scanner para ler a entrada do teclado
@@ -19,6 +22,9 @@ public class Main {
 
             // Realizando a consulta à API externa
             String respostaAPI = APIRequest.consultarAPIExterna();
+
+            // Desserializando o JSON retornado em um objeto Product
+            Product product = APIRequest.desserializarProduto(respostaAPI);
 
             // Imprimindo o resultado da consulta
             System.out.println("Resposta da API:");

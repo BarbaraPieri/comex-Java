@@ -1,8 +1,14 @@
+package API;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+
+import API.Product;
+import com.google.gson.Gson;
+
 
 public class APIRequest {
     public static String consultarAPIExterna() {
@@ -29,8 +35,12 @@ public class APIRequest {
         } catch (IOException | InterruptedException e) {
             System.out.println("Erro ao fazer a requisição: " + e.getMessage());
         }
-
-        // Em caso de erro, retornar uma string vazia
-        return "";
+        return ""; // Em caso de erro, retornar uma string vazia
+        }
+        public static Product desserializarProduto(String json) {
+        // Desserializar o JSON retornado pela API em um objeto Product
+        Gson gson = new Gson();
+        Product product = gson.fromJson(json, Product.class);
+        return product;
     }
 }
